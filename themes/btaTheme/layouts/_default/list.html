@@ -4,7 +4,7 @@
         {{ range  $paginator.Pages.ByPublishDate.Reverse }}
             {{- partial "tags.html" . -}}
             <div class="d-flex px-0 pb-3" href="{{ .RelPermalink }}">
-                {{ with .Resources.GetMatch "featured.png" }}
+                {{ with .Resources.GetMatch "feature.png" }}
                     <img src="{{ .RelPermalink }}" class="post-img" />
                 {{ end }}
                 <div class="ms-3">

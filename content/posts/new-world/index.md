@@ -3,6 +3,7 @@ title = "The Better than Adventure! official website is now live"
 date = 2024-04-08T14:41:00+01:00
 draft = false
 tags = ["News"]
+description = 'We finally have a web presence!'
 type = "article"
 [params]
     authors = ["Mak"]

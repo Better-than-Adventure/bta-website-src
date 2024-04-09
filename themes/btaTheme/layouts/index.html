@@ -9,7 +9,7 @@
             <div>
                 {{ range ( where .Site.RegularPages "Type" "article" | first 3 ) }}
                     <div class="d-flex mb-2">
-                        {{ with .Resources.GetMatch "featured.png" }}
+                        {{ with .Resources.GetMatch "feature.png" }}
                             <img src="{{ .RelPermalink }}" class="post-thumb" />
                         {{ end }}
                         <div>

@@ -3,64 +3,67 @@ languageCode = 'en-us'
 title = 'Better than Adventure!'
 theme = 'btaTheme'
 
+[params]
+description = 'A mod for Minecraft Beta 1.7.3'
+images = ['/images/og-image.jpg']
+
 [module]
 [[module.mounts]]
-    source = 'node_modules/bootstrap/scss'
-    target = 'assets/scss/bootstrap'
+source = 'node_modules/bootstrap/scss'
+target = 'assets/scss/bootstrap'
 [[module.mounts]]
-    source = 'node_modules/bootstrap/dist/js/bootstrap.min.js'
-    target = 'assets/js/bootstrap.min.js'
+source = 'node_modules/bootstrap/dist/js/bootstrap.min.js'
+target = 'assets/js/bootstrap.min.js'
 [caches]
-    [caches.getjson]
-        dir = ":cacheDir/:project"
-        maxAge = "10s"
+[caches.getjson]
+dir = ":cacheDir/:project"
+maxAge = "10s"
 
 [taxonomies]
-  category = 'categories'
-  tag = 'tags'
-  author = 'authors'
+category = 'categories'
+tag = 'tags'
+author = 'authors'
 
 [menu]
-    [[menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
-        weight = 1
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
 
-    [[menu.main]]
-        identifier = "posts"
-        name = "Blog"
-        url = "/posts/"
-        weight = 2
-        
-    [[menu.main]]
-        identifier = "downloads"
-        name = "Downloads"
-        url = "/downloads/"
-        weight = 3
+[[menu.main]]
+identifier = "posts"
+name = "Blog"
+url = "/posts/"
+weight = 2
 
-    [[menu.main]]
-        identifier = "installation-guide"
-        name = "Install Guide"
-        url = "/installation-guide/"
-        weight = 4
+[[menu.main]]
+identifier = "downloads"
+name = "Downloads"
+url = "/downloads/"
+weight = 3
 
-                
-    [[menu.main]]
-        identifier = "screenshots"
-        name = "Screenshots"
-        url = "/screenshots/"
-        weight = 5
-                
-    [[menu.main]]
-        identifier = "tutorials"
-        name = "Tutorials"
-        url = "/tutorials/"
-        weight = 6
+[[menu.main]]
+identifier = "installation-guide"
+name = "Install Guide"
+url = "/installation-guide/"
+weight = 4
 
-    [[menu.main]]
-        identifier = "wiki"
-        name = "Wiki"
-        url = "https://bta.miraheze.org"
-        weight = 7
-        
+
+[[menu.main]]
+identifier = "screenshots"
+name = "Screenshots"
+url = "/screenshots/"
+weight = 5
+
+[[menu.main]]
+identifier = "tutorials"
+name = "Tutorials"
+url = "/tutorials/"
+weight = 6
+
+[[menu.main]]
+identifier = "wiki"
+name = "Wiki"
+url = "https://bta.miraheze.org"
+weight = 7

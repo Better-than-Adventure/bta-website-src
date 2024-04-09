@@ -1,5 +1,6 @@
 +++
 title = 'Home'
+description = 'Better than Adventure!'
 [params]
     header = '/images/header/home.jpg'
 +++
