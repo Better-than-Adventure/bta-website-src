@@ -26,4 +26,4 @@ BTA brings new additions to classic Minecraft in the form of timely updates So f
 
 Please check out our [installation guide](/installation-guide) for step-by-step instructions on installing Better than Adventure!
 
-If you'd like to keep up to date on the latest updates, or you have a bug to report, then please visit our [Discord](https://discord.com/invite/jvwD8BKq5e)!
+If you'd like to keep up to date on the latest updates, or you have a bug to report, then please visit our [Discord](https://www.betterthanadventure.net/discord)!
