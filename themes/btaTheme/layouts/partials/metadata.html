@@ -1,0 +1,17 @@
+<div style="color: gray;">
+    {{ $taxonomy := "authors" }}
+    {{ with .Param $taxonomy }}
+        Posted by
+        {{ range $index, $author := . }}
+            {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy (urlize $author)) -}}
+                {{ if gt $index 0 }}
+                    {{- "" -}}
+                    <span class="text-align-left">,</span>
+                {{ end }}
+                <a href="{{ .Permalink }}">{{ $author }}</a>{{- "" -}}
+            {{ end }}{{- "" -}}
+        {{ end }}
+    {{ end }}
+    on
+    {{- partial "time.html" . -}}
+</div>

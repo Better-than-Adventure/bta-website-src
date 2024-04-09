@@ -1,0 +1,7 @@
+<div class="row w-100">
+    {{ range readDir "/static/images/bg" }}
+        <div class="col col-md-4 gx-3 gy-3">
+            <img src="/images/bg/{{ .Name }}" />
+        </div>
+    {{ end }}
+</div>

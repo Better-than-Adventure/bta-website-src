@@ -1,0 +1,42 @@
+<div>
+    {{ $release := getJSON "https://api.github.com/repos/Better-than-Adventure/bta-download-repo/releases/latest" }}
+    <div id="latest-release">
+        <h5 style="color: #5aa938; font-family: 'minecraft';">
+            Download the latest version
+        </h5>
+
+        <h4 class="mb-3" style="font-family: 'minecraft';">
+            {{ $release.name }}
+        </h4>
+        {{ $manifest := "null" }}
+        {{ range $release.assets }}
+            {{ $c := . }}
+            {{ if eq $c.name "manifest.json" }}
+                {{ $manifest = $c.browser_download_url }}
+            {{ end }}
+        {{ end }}
+        {{ if not (in $manifest "null") }}
+            {{ $manifestJSON := getJSON $manifest }}
+            <div class="d-grid gap-2">
+                {{ range $manifestJSON.web_files }}
+                    {{ $m := . }}
+                    {{ if eq $m.name "MultiMC Instance" }}
+                        <button
+                            class="btn btn-primary btn-main me-2  btn-block"
+                            onclick="location.href='https://github.com/Better-than-Adventure/bta-download-repo/releases/download/{{ $release.name }}/{{ $m.asset }}'"
+                        >
+                            {{ $m.name }}
+                        </button>
+                    {{ else }}
+                        <button
+                            class="btn btn-outline-primary me-2  btn-block"
+                            onclick="location.href='https://github.com/Better-than-Adventure/bta-download-repo/releases/download/{{ $release.name }}/{{ $m.asset }}'"
+                        >
+                            {{ $m.name }}
+                        </button>
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>

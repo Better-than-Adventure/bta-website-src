@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="content">
+            {{ if .Params.header }}
+                <div id="page-header">
+                    <div
+                        class="content page-header px-5 d-flex align-items-center"
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.25) 65%, rgba(0, 0, 0, 0.7)), url('{{ .Params.header }}'); background-size: cover; background-position: center; border-bottom: #5aa938 4px solid;"
+                    >
+                        <h1 class="title minecraft-regular">{{ .Title }}</h1>
+                        {{ if .Params.thaboar }}
+                            <div class="tilt">
+                                <div id="status-daboar" class="pop">
+                                    By&nbsp;<a href="https://twitter.com/thaboarr">@thaboarr</a>!
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+            <div class="mt-4 px-3 px-lg-0">
+                {{- block "main" . }}
+            </div>
+        </div>
+        {{- end }}
+    </body>
+    {{- partial "footer.html" . -}}
+    {{- partial "script.html" . -}}
+</html>
+{{ $bootstrapJs := resources.Get "/js/bootstrap.min.js" }}
+<script src="{{ $bootstrapJs.Permalink | relURL }}"></script>

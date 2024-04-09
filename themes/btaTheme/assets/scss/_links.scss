@@ -1,0 +1,15 @@
+a,
+a:link {
+    color: $accent;
+    text-decoration: inherit;
+    font-weight: bold;
+    &:hover,
+    &:active {
+        color: $accent-highlight;
+        text-decoration: none;
+    }
+}
+
+a:active {
+    color: $accent-active;
+}

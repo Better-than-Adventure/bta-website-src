@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <div class="metadata" style="color: gray">
+        {{ .Content }}
+    </div>
+    <div class="row g-2">
+        {{ if .Params.gallery }}
+            {{ $galleryDir := .Params.gallery }}
+            {{ range readDir (print "/static/" $galleryDir) }}
+                <div class="col-auto col-md-4">
+                    <a href="/{{ $galleryDir }}/{{ .Name }}">
+                        <img
+                            loading="lazy"
+                            class="gallery"
+                            src="/{{ $galleryDir }}/{{ .Name }}"
+                        />
+                    </a>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}

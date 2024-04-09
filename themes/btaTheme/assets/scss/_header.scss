@@ -1,0 +1,124 @@
+#logo-mobile {
+    display: none;
+    max-height: 24px;
+}
+
+.logo-mobile-container {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+#logo-desktop {
+    max-height: 180px;
+    margin-top: 3rem;
+}
+
+#nav-mobile {
+    display: none;
+}
+
+.header {
+    background-image: linear-gradient(
+            rgba(41, 40, 42, 0) 50%,
+            rgba(10, 10, 10, 0.5)
+        ),
+        url("/images/subzoomed.png");
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18rem;
+}
+
+#status {
+    color: #ffff00;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px #3f3f00;
+    font-family: "minecraft";
+    padding: 40px;
+    position: absolute;
+    left: -95px;
+    top: 130px;
+}
+
+#status-daboar {
+    color: #ffff00;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px #07070765;
+    font-family: "minecraft";
+    padding: 40px;
+    position: absolute;
+    left: -95px;
+    top: -24px;
+
+    a {
+        &:hover {
+            color: #ffff6d;
+        }
+        color: #ffff00;
+    }
+}
+
+.pop {
+    animation: pop 0.58s infinite;
+    -webkit-animation: pop 0.58s infinite;
+}
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.95);
+    }
+}
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform: scale(0.95);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+    to {
+        -webkit-transform: scale(0.95);
+    }
+}
+.tilt {
+    -ms-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+@media (max-width: 720px) {
+    #header-desktop {
+        display: none;
+    }
+
+    #nav-mobile {
+        display: block;
+    }
+
+    #logo-desktop {
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+    }
+    #status {
+        left: -80px;
+        top: 25px;
+    }
+
+    .header {
+        height: 9.5rem;
+        border-bottom: #5aa938 4px solid;
+    }
+
+    #status-daboar {
+        font-size: 1rem;
+        left: -85px;
+        top: -30px;
+    }
+}

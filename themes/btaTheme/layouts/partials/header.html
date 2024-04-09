@@ -1,0 +1,82 @@
+<div id="nav-mobile" class="sticky-top">
+    <div class="navbar-container">
+        <nav class="navbar navbar-custom navbar-expand">
+            <div class="navbar-nav">
+                <button
+                    class="nav-link px-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="logo-mobile-container">
+                    <a href="/">
+                        <img
+                            id="logo-mobile"
+                            src="/images/badge-bta.png"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="collapse mobile-menu" id="navbarToggleExternalContent">
+        <ul class="navbar-nav">
+            {{ $currentPage := .RelPermalink -}}
+            {{ range .Site.Menus.main }}
+                <li class="nav-item px-3 py-1">
+                    <a
+                        class="nav-link mobile
+                {{ if eq $currentPage .URL }}
+                            active
+                        {{ end }}"
+                        href="{{ .URL | relLangURL }}"
+                    >
+                        {{ $text := print .Name | safeHTML }}
+                        {{ $text }}
+                    </a>
+                </li>
+                <hr class="my-0" />
+            {{ end }}
+        </ul>
+    </div>
+</div>
+
+<div id="header-desktop">
+    <div class="header d-flex justify-content-center">
+        <div>
+            <img id="logo-desktop" src="/images/logo-header.png" class="logo" href="/"/>
+        </div>
+        <div class="tilt">
+            <div id="status" class="pop">.net!</div>
+        </div>
+    </div>
+    <div id="nav-desktop" class="navbar-container">
+        <nav class="navbar navbar-custom navbar-expand">
+            <div class="container-fluid justify-content-center">
+                <ul class="navbar-nav">
+                    {{ $currentPage := .RelPermalink -}}
+                    {{ range .Site.Menus.main }}
+                        <li class="nav-item">
+                            <a
+                                class="nav-link 
+                            {{ if eq $currentPage .URL }}
+                                    active
+                                {{ end }}"
+                                href="{{ .URL | relLangURL }}"
+                            >
+                                {{ $text := print .Name | safeHTML }}
+                                {{ $text }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

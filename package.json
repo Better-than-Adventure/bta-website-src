@@ -1,0 +1,27 @@
+{
+    "name": "bta-website-hugo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender",
+        "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender --buildFuture --buildDraft",
+        "build": "exec-bin node_modules/.bin/hugo/hugo --gc --cleanDestinationDir --minify",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.2.3",
+        "exec-bin": "^1.0.0",
+        "hugo-installer": "^4.0.1"
+    },
+    "otherDependencies": {
+        "hugo": "0.124.1"
+    },
+    "devDependencies": {
+        "prettier": "^3.0.3",
+        "prettier-plugin-go-template": "^0.0.15"
+    }
+}

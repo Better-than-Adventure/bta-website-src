@@ -1,0 +1,197 @@
+@import "colors.scss";
+@import "fonts.scss";
+@import "downloads.scss";
+@import "header.scss";
+@import "footer.scss";
+
+@import "navigation.scss";
+@import "pagination.scss";
+@import "node_modules/bootstrap/scss/functions";
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "links.scss";
+@import "buttons.scss";
+
+html {
+    font-size: 85.5%;
+}
+
+img {
+    text-align: center;
+}
+
+pre {
+    border-left: $accent solid 0.25rem;
+    background-color: #131313;
+    padding: 1rem;
+}
+
+p {
+    margin-top: 1.25em;
+}
+
+.tag {
+    font-family: "minecraft";
+    font-size: 0.8rem;
+}
+
+.metadata {
+    font-family: "minecraft";
+    font-size: 1rem;
+}
+
+.post-card {
+    padding: 2rem;
+    background-color: #434343;
+    border-radius: 1rem;
+}
+
+.post-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    @media (max-width: 720px) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.post-thumb {
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.block-icon {
+    margin-right: 1rem;
+    width: 80px;
+    object-fit: contain;
+}
+
+.post-header {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 0.25rem solid $accent;
+}
+
+#homepage-blossom {
+    height: 200px;
+    width: 200px;
+}
+
+hr {
+    opacity: 1;
+    border-bottom: 0.1rem solid $black-lighter;
+    border-top: 0.1rem solid $black-dark;
+}
+
+body {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+    background-color: $black;
+    color: $color-bright;
+    font-family:
+        Roboto,
+        -apple-system,
+        BlinkMacSystemFont,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        Fira Sans,
+        Droid Sans,
+        Helvetica Neue,
+        sans-serif;
+    font-size: 16px;
+
+    #content-body {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .title-header-lg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 15rem;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        align-content: center;
+        justify-content: left;
+        padding-left: 3rem;
+        font-size: 3rem;
+        font-style: initial;
+        font-family: "minecraft";
+        text-shadow: 5px 6px 0 rgba(0, 0, 0, 0.38);
+    }
+
+    .content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .linebreak {
+        border-top: 0.25rem solid $accent;
+    }
+
+    .gallery {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        padding: 0.5em 0;
+        font-size: 4rem;
+        font-weight: 900;
+        font-family: minecraft;
+        text-shadow: 7px 7px 0 rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 1rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+        margin-top: 1.5em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+    }
+
+    img {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .page-header {
+        height: 180px;
+    }
+
+    // strong {
+    //     color: #ffff00;
+    // }
+    @media (max-width: 720px) {
+        .title {
+            font-size: 2.5rem;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
+        }
+        .page-header {
+            height: 140px;
+        }
+    }
+}

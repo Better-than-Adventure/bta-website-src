@@ -1,0 +1,99 @@
+<div>
+    {{ $url := .Get "url" }}
+    {{ with resources.GetRemote $url }}
+        {{ with .Err }}
+            {{ warnf "%s" . }}
+            <div>
+                Could not fetch latest release info from Github! Please visit
+                <span
+                    ><a
+                        href="https://github.com/Better-than-Adventure/bta-download-repo/releases/latest"
+                        >our Github</a
+                    ></span
+                >
+                to manually download the latest version.
+            </div>
+        {{ else }}
+            {{ $release := .Content | transform.Unmarshal }}
+            {{ if not (in $release "null") }}
+                <div id="latest" class="mb-4">
+                    {{ $icon := "null" }}
+                    {{ range $release.assets }}
+                        {{ $c := . }}
+                        {{ if eq $c.name "bta-icon.png" }}
+                            {{ $icon = $c.browser_download_url }}
+                        {{ end }}
+                    {{ end }}
+                    <div class="d-flex">
+                        <div class="pe-4">
+                            <img class="release-icon" src="{{ $icon }}" />
+                        </div>
+                        <div class="w-100">
+                            <h5 class="mt-0 mb-0 latest">
+                                Latest Stable Release
+                            </h5>
+                            <h1 class="mt-0 latest-title">
+                                <span class="mb-3">{{ $release.name }}</span>
+                            </h1>
+                            <hr class="mt-3 mb-3" />
+                            <div>
+                                <h5 class="mt-0 mb-2">
+                                    <span class="latest">Recommended:</span>
+                                    MultiMC/Prism update utility
+                                    <span
+                                        ><a href="/installation-guide"
+                                            >(More info)</a
+                                        ></span
+                                    >
+                                </h5>
+                                <button
+                                    class="btn btn-primary btn-main me-2 mb-3 btn-block"
+                                    onclick="location.href='https://github.com/Better-than-Adventure/bta-multimc-updater/releases/download/r2.0/BTA.Updater.2.0.zip'"
+                                >
+                                    Download Update Utility
+                                </button>
+                                <h5 class="mt-1 mb-2">Other methods:</h5>
+                                {{ $manifest := "null" }}
+                                {{ range $release.assets }}
+                                    {{ $c := . }}
+                                    {{ if eq $c.name "web-manifest.json" }}
+                                        {{ $manifest = $c.browser_download_url }}
+                                    {{ end }}
+                                {{ end }}
+                                {{ if not (in $manifest "null") }}
+                                    {{ $manifestJSON := getJSON $manifest }}
+                                    <div class="d-lg-flex gx-2 mb-3">
+                                        {{ range $manifestJSON.web_files }}
+                                            {{ $m := . }}
+                                            <button
+                                                class="btn btn-primary me-2 mb-2"
+                                                onclick="location.href='https://github.com/Better-than-Adventure/bta-download-repo/releases/download/{{ $release.name }}/{{ $m.asset }}'"
+                                            >
+                                                {{ $m.name }}
+                                            </button>
+                                        {{ end }}
+                                    </div>
+                                    <button
+                                        class="btn btn-outline-primary me-2 mb-2"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseWidthExample"
+                                        aria-expanded="false"
+                                        aria-controls="collapseWidthExample"
+                                    >
+                                        View Changelog
+                                    </button>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="changelog collapse collapse-vertical"
+                        id="collapseWidthExample"
+                    >
+                        {{ $release.body | markdownify }}
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>

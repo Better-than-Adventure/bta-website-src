@@ -1,0 +1,30 @@
+#latest {
+    .latest {
+        color: $accent;
+    }
+
+    .latest-title {
+        font-family: "minecraft";
+
+        text-shadow: 6px 4px 0 rgba(102, 102, 102, 0.5);
+    }
+    .text {
+        font-weight: 700;
+    }
+
+    .changelog {
+        font-family: "courier";
+        color: #b5b5b5;
+        border-left: #5aa938 solid 0.25rem;
+        background-color: #131313;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    background-color: $black-dark;
+    padding: 2rem 2rem;
+    .release-icon {
+        width: 150px;
+    }
+}

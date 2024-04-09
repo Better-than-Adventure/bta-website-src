@@ -1,0 +1,55 @@
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 2rem;
+
+$bs-pagination-bg: #5a2f2f;
+$bs-pagination-border-color: $accent;
+$btn-border-radius: 0rem;
+$btn-border-radius-sm: 0rem;
+
+.navbar-container {
+    background-color: $accent;
+    border-bottom: 0.25rem solid $accent-shadow;
+    border-top: 0.25rem solid $accent-highlight;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-title {
+    font-weight: bold;
+    color: $white;
+    margin: auto;
+    margin-left: 1rem;
+}
+
+.mobile-menu {
+    background-color: $black;
+    border-bottom: $accent 4px solid;
+    .nav-link {
+        color: $accent;
+        &:hover {
+            color: $accent-highlight;
+        }
+        &.active {
+            color: $white;
+        }
+    }
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: $white;
+    text-decoration: inherit;
+    font-weight: bold;
+
+    &.active {
+        color: $white;
+        background-color: $accent-active;
+    }
+
+    &:hover {
+        background-color: $accent-highlight;
+    }
+}

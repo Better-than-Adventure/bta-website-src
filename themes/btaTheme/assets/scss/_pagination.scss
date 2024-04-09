@@ -1,0 +1,15 @@
+.pagination {
+    .pagination-item {
+        a {
+            color: white;
+            font-weight: 400;
+            font-size: 1em;
+        }
+        &.active {
+            a {
+                color: $accent;
+                font-weight: 600;
+            }
+        }
+    }
+}

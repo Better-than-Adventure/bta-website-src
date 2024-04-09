@@ -1,0 +1,52 @@
+<h2 class="mt-0 pb-1">Latest Release</h2>
+{{ $url := "https://api.github.com/repos/Better-than-Adventure/bta-download-repo/releases/latest" }}
+{{ with resources.GetRemote $url }}
+    {{ with .Err }}
+        {{ warnf "%s" . }}
+        <div class="align-items-center mb-4">
+            Could not fetch latest release info from Github! Please visit
+            <span
+                ><a
+                    href="https://github.com/Better-than-Adventure/bta-download-repo/releases/latest"
+                    >our Github</a
+                ></span
+            >
+            to manually download the latest version.
+        </div>
+        <hr class="mb-5" />
+    {{ else }}
+        {{ $data := .Content | transform.Unmarshal }}
+        {{ if not (in $data "null") }}
+            <div class="d-flex align-items-center mb-4">
+                {{ $icon := "null" }}
+                {{ range $data.assets }}
+                    {{ $c := . }}
+                    {{ if eq $c.name "bta-icon.png" }}
+                        {{ $icon = $c.browser_download_url }}
+                    {{ end }}
+                {{ end }}
+                <img src="{{ $icon }}" class="block-icon" />
+                {{ $manifest := "null" }}
+                {{ range $data.assets }}
+                    {{ $c := . }}
+                    {{ if eq $c.name "web-manifest.json" }}
+                        {{ $manifest = $c.browser_download_url }}
+                    {{ end }}
+                {{ end }}
+                <div class="w-100 d-grid gap-2">
+                    <div style="color: gray;" class="metadata">
+                        {{ $data.name }}
+                    </div>
+                    <a
+                        class="btn btn-block btn-primary btn-download"
+                        href="{{ "/downloads"  | relLangURL }}"
+                        role="button"
+                    >
+                        Download!
+                    </a>
+                </div>
+            </div>
+            <hr class="mb-5" />
+        {{ end }}
+    {{ end }}
+{{ end }}

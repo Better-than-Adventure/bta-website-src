@@ -1,0 +1,49 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate (where .Pages "Type" "article") }}
+    <div class="px-0">
+        {{ range  $paginator.Pages.ByPublishDate.Reverse }}
+            {{- partial "tags.html" . -}}
+            <div class="d-flex px-0 pb-3" href="{{ .RelPermalink }}">
+                {{ with .Resources.GetMatch "featured.png" }}
+                    <img src="{{ .RelPermalink }}" class="post-img" />
+                {{ end }}
+                <div class="ms-3">
+                    {{- partial "metadata.html" . -}}
+                    <h3 class="post-title mt-0">{{ .Title }}</h3>
+                    <div>{{ .Content | safeHTML | truncate 100 }}</div>
+                    <a href="{{ .RelPermalink }}">
+                        <div>Read Post »</div>
+                    </a>
+                </div>
+            </div>
+            <hr />
+        {{ end }}
+
+
+        <ul class="pagination">
+            {{ if $paginator.HasPrev }}
+                <li class="pagination-item px-1">
+                    <a href="{{ $paginator.Prev.URL }}"> « </a>
+                </li>
+            {{ end }}
+            {{ range $paginator.Pagers }}
+                <li class="pagination-item px-1">
+                    {{ if eq . $paginator }}
+                        <div class="active">
+                            {{ .PageNumber }}
+                        </div>
+                    {{ else }}
+                        <a href="{{ .URL }}">
+                            {{ .PageNumber }}
+                        </a>
+                    {{ end }}
+                </li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+                <li class="pagination-item px-1">
+                    <a href="{{ $paginator.Next.URL }}"> » </a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}

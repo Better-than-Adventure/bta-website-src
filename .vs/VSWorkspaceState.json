@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.idea",
+    "\\public",
+    "\\public\\images",
+    "\\themes",
+    "\\themes\\btaTheme",
+    "\\themes\\btaTheme\\assets",
+    "\\themes\\btaTheme\\assets\\scss",
+    "\\themes\\btaTheme\\static",
+    "\\themes\\btaTheme\\static\\images"
+  ],
+  "SelectedNode": "\\themes\\btaTheme\\static\\images",
+  "PreviewInSolutionExplorer": false
+}

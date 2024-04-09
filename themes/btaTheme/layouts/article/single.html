@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="content">
+        {{ with .Resources.GetMatch "featured.png" }}
+            <img src="{{ .RelPermalink }}" class="post-header" />
+        {{ end }}
+    </div>
+
+    <div class="content py-4 mb-2">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">{{- partial "tags.html" . -}}</div>
+            {{- partial "metadata.html" . -}}
+        </div>
+        <h1 class="mb-3">{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+{{ end }}

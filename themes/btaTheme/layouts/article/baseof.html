@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="content">
+            <div class="px-3 px-lg-0">
+                {{- block "main" . }}
+            </div>
+        </div>
+        {{- end }}
+    </body>
+    {{- partial "footer.html" . -}}
+    {{- partial "script.html" . -}}
+</html>
+{{ $bootstrapJs := resources.Get "/js/bootstrap.min.js" }}
+<script src="{{ $bootstrapJs.Permalink | relURL }}"></script>
