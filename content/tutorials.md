@@ -1,6 +1,6 @@
 +++
 title = 'Tutorials'
-type = 'gallery'
+type = 'gallery-anim'
 [params]
     gallery = 'images/thaboar'
     header = '/images/header/about.png'

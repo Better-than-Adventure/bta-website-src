@@ -1,4 +1,5 @@
 const images = 6;
+var video = document.getElementById("thaboar-video");
 
 function mulberry32(a) {
     return function () {
@@ -16,6 +17,11 @@ var timestamp = startOfDay / 1000;
 const prng = mulberry32(timestamp);
 
 rand = Math.floor(prng() * 6) + 1;
-imagePath = "images/thaboar/btatip" + rand + ".gif";
+videoPath = "/images/thaboar/btatip" + rand + ".mp4";
 
-document.getElementById("thaboar-img").src = imagePath;
+var source = document.createElement("source");
+
+source.setAttribute("src", videoPath);
+source.setAttribute("type", "video/mp4");
+video.appendChild(source);
+video.play();

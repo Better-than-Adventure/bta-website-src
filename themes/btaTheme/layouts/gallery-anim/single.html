@@ -1,0 +1,29 @@
+{{ define "main" }}
+    <div class="metadata" style="color: gray">
+        {{ .Content }}
+    </div>
+    <div class="row g-2">
+        {{ if .Params.gallery }}
+            {{ $galleryDir := .Params.gallery }}
+            {{ range readDir (print "/static/" $galleryDir) }}
+                <div class="col-auto col-md-4">
+                    <a href="/{{ $galleryDir }}/{{ .Name }}">
+                        <video
+                            loading="lazy"
+                            width="100%"
+                            height="100%"
+                            loop
+                            autoplay="autoplay"
+                            class="gallery"
+                        >
+                            <source
+                                src="/{{ $galleryDir }}/{{ .Name }}"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </a>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}
