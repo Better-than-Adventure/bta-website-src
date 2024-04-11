@@ -18,6 +18,9 @@ target = 'assets/js/bootstrap.min.js'
 [caches.getjson]
 dir = ":cacheDir/:project"
 maxAge = "10s"
+[caches.getresource]
+dir = ":cacheDir/:project"
+maxAge = "30m"
 
 [taxonomies]
 category = 'categories'
