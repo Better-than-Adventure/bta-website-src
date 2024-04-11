@@ -6,6 +6,8 @@ $bs-pagination-border-color: $accent;
 $btn-border-radius: 0rem;
 $btn-border-radius-sm: 0rem;
 
+$nav-link-hover-color: #519833;
+
 .navbar-container {
     background-color: $accent;
     border-bottom: 0.25rem solid $accent-shadow;
@@ -49,7 +51,7 @@ $btn-border-radius-sm: 0rem;
         background-color: $accent-active;
     }
 
-    &:hover {
-        background-color: $accent-highlight;
+    &:not(.active):hover {
+        background-color: $nav-link-hover-color;
     }
 }
