@@ -6,6 +6,9 @@ $bs-pagination-border-color: $accent;
 $btn-border-radius: 0rem;
 $btn-border-radius-sm: 0rem;
 
+$nav-link-hamburger-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC4yMDYzOSIgeT0iMC4wMjMxNDc2IiB3aWR0aD0iMjAuOTIzNiIgaGVpZ2h0PSIzIiByeD0iMC4zIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIwLjIwNjM5IiB5PSI3LjAyMzE1IiB3aWR0aD0iMjAuOTIzNiIgaGVpZ2h0PSIzIiByeD0iMC4zIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIwLjIwNjM5IiB5PSIxNC4wMjMxIiB3aWR0aD0iMjAuOTIzNiIgaGVpZ2h0PSIzIiByeD0iMC4zIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+$nav-link-hamburger-shadow: rgba(0, 0, 0, 0.38);
+
 $nav-link-hover-color: #519833;
 
 .navbar-container {
@@ -54,4 +57,19 @@ $nav-link-hover-color: #519833;
     &:not(.active):hover {
         background-color: $nav-link-hover-color;
     }
+
+    &[data-bs-toggle="collapse"] {
+        padding: 0 !important;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    background-image: $nav-link-hamburger-image !important;
+    filter: drop-shadow(0 1px 1px $nav-link-hamburger-shadow);
 }
