@@ -49,5 +49,5 @@
         {{ $built := resources.Get "js/index.js" | js.Build $opts }}
 
     </div>
-    <script src="{{ $built.RelPermalink }}"></script>
+    <script src="{{ $built.RelPermalink }}?{{ math.Rand | mul 1000000 | math.Floor }}"></script>
 {{ end }}

@@ -6,6 +6,14 @@ $btn-border-radius-sm: 0rem;
 .btn {
     border-radius: 0.125rem;
     font-weight: bold;
+    border-inline: 0 !important;
+
+    &.btn-primary:active {
+        background-color: color-mix(in srgb, $accent 100%, rgb(0, 0, 0) 42%);
+        border-bottom: 0.25rem solid
+            color-mix(in srgb, $accent-shadow 100%, rgb(0, 0, 0) 50%);
+        color: white !important;
+    }
 }
 .btn-primary {
     font-weight: bold;
@@ -16,15 +24,23 @@ $btn-border-radius-sm: 0rem;
     color: white;
 
     &:hover {
-        background-color: $accent-highlight;
-        border-top: 0.25rem solid $accent-highlight;
-        border-bottom: 0.25rem solid $accent;
+        background-color: color-mix(in srgb, $accent 100%, rgb(0, 0, 0) 20%);
+        border-top: 0.25rem solid
+            color-mix(in srgb, $accent-highlight 100%, rgb(0, 0, 0) 10%);
+        border-bottom: 0.25rem solid
+            color-mix(in srgb, $accent-shadow 100%, rgb(0, 0, 0) 20%);
         color: white;
 
         &:active {
-            background-color: $accent-shadow;
-            border-top: 0.25rem solid $accent;
-            border-bottom: 0.25rem solid $accent-shadow;
+            background-color: color-mix(
+                in srgb,
+                $accent 100%,
+                rgb(0, 0, 0) 42%
+            );
+            border-top: 0.25rem solid
+                color-mix(in srgb, $accent 100%, rgb(0, 0, 0) 2%);
+            border-bottom: 0.25rem solid
+                color-mix(in srgb, $accent-shadow 100%, rgb(0, 0, 0) 50%);
             color: white;
         }
     }
