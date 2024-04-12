@@ -5,7 +5,7 @@
         </div>
         <div class="col-lg-4">
             {{- partial "latest-homepage.html" -}}
-            <h2 class="mt-0 pb-1">What's happening?</h2>
+            <h2 class="pb-1">What's happening?</h2>
             <div>
                 {{ range ( where .Site.RegularPages "Type" "article" | first 3 ) }}
                     <div class="d-flex mb-2">
