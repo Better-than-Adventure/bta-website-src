@@ -14,7 +14,7 @@ Better than Adventure! is an unofficial fork of Minecraft Beta 1.7.3, a version 
 BTA brings new additions to classic Minecraft in the form of timely updates So far BTA has introduced features such as:
 
 -   **Seasons!** Spring, Summer, Fall and Winter.
--   **Laybrinths!** Scary, sprawling dungeons with rare loot to discover.
+-   **Labyrinths!** Scary, sprawling dungeons with rare loot to discover.
 -   **Steel!** A new end-game tool tier that's sturdier than diamond, but not as fast.
 -   **A completely revised armor system!** Different sets offer different benefits. Mix and match!
 -   **A plethora of new decorative blocks!** Painted wooden planks, new types of stone, bricks and more!
