@@ -16,14 +16,16 @@
             true "includePaths" (slice "node_modules"))
         }}
     {{ end }}
-    {{ $css :=
-        resources.Get "scss/main.scss"
-    }}
+
+    {{ $css := resources.Get "scss/main.scss" }}
 
     {{ $css = $css | toCSS $opts }}
 
 
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link
+        rel="stylesheet"
+        href="{{ $css.RelPermalink }}?{{ math.Rand | mul 1000000 | math.Floor }}"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

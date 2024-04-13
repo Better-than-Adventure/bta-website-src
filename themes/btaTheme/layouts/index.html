@@ -5,7 +5,8 @@
         </div>
         <div class="col-lg-4">
             {{- partial "latest-homepage.html" -}}
-            <h2 class="mt-0 pb-1">What's happening?</h2>
+			<hr />
+            <h2 class="pb-1">What's happening?</h2>
             <div>
                 {{ range ( where .Site.RegularPages "Type" "article" | first 3 ) }}
                     <div class="d-flex mb-2">
@@ -27,7 +28,10 @@
                 {{ end }}
             </div>
             <hr />
-            <h2 class="pb-1">Tip of the Day!</h2>
+			<div class="pb-1 mt-5 mb-2 d-flex align-items-center justify-content-between">
+				<h2 class="m-0">Tip of the Day!</h2>
+				<a href="/tutorials/">More Tips</a>
+			</div>
             <div>
                 <video
                     id="thaboar-video"
@@ -45,5 +49,5 @@
         {{ $built := resources.Get "js/index.js" | js.Build $opts }}
 
     </div>
-    <script src="{{ $built.RelPermalink }}"></script>
+    <script src="{{ $built.RelPermalink }}?{{ math.Rand | mul 1000000 | math.Floor }}"></script>
 {{ end }}
