@@ -5,7 +5,7 @@ description = 'Better than Adventure!'
     header = '/images/header/home.jpg'
 +++
 
-{{<youtube 0O9maBZ3vI8>}}
+{{<youtube m5bWu1njLHQ>}}
 
 Better than Adventure! is an unofficial fork of Minecraft Beta 1.7.3, a version of the game released in 2011. Its goal is to revitalize classic Minecraft with new gameplay features, quality of life improvements, and optimizations!
 
