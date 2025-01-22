@@ -47,26 +47,33 @@ url = "/downloads/"
 weight = 3
 
 [[menu.main]]
+identifier = "report-a-bug"
+name = "Report A Bug"
+url = "https://bugs.betterthanadventure.net/open.php"
+weight = 4
+
+
+[[menu.main]]
 identifier = "installation-guide"
 name = "Install Guide"
 url = "/installation-guide/"
-weight = 4
+weight = 5
 
 
 [[menu.main]]
 identifier = "screenshots"
 name = "Screenshots"
 url = "/screenshots/"
-weight = 5
+weight = 6
 
 [[menu.main]]
 identifier = "tutorials"
 name = "Tutorials"
 url = "/tutorials/"
-weight = 6
+weight = 7
 
 [[menu.main]]
 identifier = "wiki"
 name = "Wiki"
 url = "https://bta.miraheze.org"
-weight = 7
+weight = 8
