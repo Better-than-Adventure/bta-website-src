@@ -49,7 +49,7 @@ weight = 3
 [[menu.main]]
 identifier = "report-a-bug"
 name = "Report A Bug"
-url = "https://bugs.betterthanadventure.net/open.php"
+url = "https://bugs.betterthanadventure.net/index.php"
 weight = 4
 
 
