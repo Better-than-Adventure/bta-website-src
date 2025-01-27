@@ -40,7 +40,7 @@ For now, please download the MultiMC/Prism instance manually [here](/downloads).
 
 To manually install with MultiMC/Prism just drag and drop the downloaded ZIP file into your launcher. More details can be found [here](https://www.betterthanadventure.net/installation-guide) under _"Installation: MultiMC/Prism Instance"_.
 
-If you need any assistance in installing or have a bug to report, then please submit a ticket to our new [issue tracker](bugs.betterthanadventure.net).
+If you need any assistance in installing or have a bug to report, then please submit a ticket to our new [issue tracker](https://bugs.betterthanadventure.net/).
 
 Have a nice day! :-)
 
