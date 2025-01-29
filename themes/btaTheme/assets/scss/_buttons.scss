@@ -6,7 +6,6 @@ $btn-border-radius-sm: 0rem;
 .btn {
     border-radius: 0.125rem;
     font-weight: bold;
-    border-inline: 0 !important;
 
     &.btn-primary:active {
         background-color: color-mix(in srgb, $accent 100%, rgb(0, 0, 0) 42%);
@@ -16,6 +15,7 @@ $btn-border-radius-sm: 0rem;
     }
 }
 .btn-primary {
+    border-inline: 0 !important;
     font-weight: bold;
     border-bottom: 0.25rem solid $accent-shadow;
     border-top: 0.25rem solid $accent-highlight;

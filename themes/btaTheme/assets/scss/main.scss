@@ -83,6 +83,12 @@ p {
     width: 200px;
 }
 
+.card {
+    background-color: $black-dark;
+    color: #999;
+    padding: 1rem;
+}
+
 hr {
     opacity: 1;
     border-bottom: 0.1rem solid $black-lighter;
