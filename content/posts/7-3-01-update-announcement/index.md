@@ -14,7 +14,7 @@ Hello!
 A new patch for version 7.3 is out now to fix a few outstanding issues. It also adds new stairs and slabs for various brick blocks, and a couple minor tweaks to existing features.
 
 Enjoy!
-
+`
 Full list of changes:
 
 -   Added new slab and stair blocks:
