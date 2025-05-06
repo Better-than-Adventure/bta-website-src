@@ -6,7 +6,7 @@ tags = ["News", "Update"]
 description = 'A Colorful Patch'
 type = "article"
 [params]
-    authors = ["Jonk", "Mak"]
+    authors = ["Jonkadelic", "Mak"]
 +++
 
 G'day!
