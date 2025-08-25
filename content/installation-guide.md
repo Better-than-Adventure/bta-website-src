@@ -4,11 +4,17 @@ title = 'Installation Guide'
     header = '/images/header/home.jpg'
 +++
 
-{{< container >}}
-_For 7.3 and beyond, the update utility tool is being discontinued until further notice, as we are experiencing issues with Github's API fetching releases. Please manually download for the time being._
-{{< /container >}}
+## Installation: Better than Adventure! Updater
 
-## Installation: MultiMC/Prism Instance
+-   Download the BTA! Updater
+-   Drag and drop it onto your running Prism Launcher or MultiMC window. From there, click OK. You will see a new instance in your launcher called bta.updater.v3.0.mmc.
+-   To install BTA!, run the new instance and click "Install". It should create a managed instance for you inside MultiMC/Prism.
+-   When a new version of the updater is released, simply run the updater from your launcher and it will self-update in place.
+-   Finally, Launch the managed instance of Better than Adventure that has been created for you.
+
+When a new version of the updater is released, simply run the updater from your launcher and it will self-update in place.
+
+## Installation: Manual (MultiMC/Prism)
 
 -   Download MultiMC and launch it.
 -   Simply drag and drop the 'MultiMC instance' zip file into your MultiMC and it should appear on your instances screen. Alternatively, click "Add Instance", then "Import", locate the zip file and click "OK".

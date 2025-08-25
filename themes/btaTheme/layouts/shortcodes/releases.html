@@ -37,6 +37,22 @@
                             </h1>
                             <hr class="mt-3 mb-3" />
                             <div>
+                                <h5 class="mt-0 mb-2">
+                                    <span class="latest">Recommended:</span>
+                                    MultiMC/Prism update utility
+                                    <span
+                                        ><a href="/installation-guide"
+                                            >(More info)</a
+                                        ></span
+                                    >
+                                </h5>
+                                <button
+                                    class="btn btn-primary btn-main me-2 mb-3 btn-block"
+                                    onclick="location.href='https://downloads.betterthanadventure.net/bta-installer/bta.updater.v3.0.mmc.zip'"
+                                >
+                                    Download Update Utility
+                                </button>
+                                <h5 class="mt-1 mb-2">Manual Install:</h5>
                                 {{ $manifest := "null" }}
                                 {{ range $release.assets }}
                                     {{ $c := . }}
@@ -51,9 +67,6 @@
                                             {{ $m := . }}
                                             {{ if eq $m.name "MultiMC Instance" }}
                                                 <h5 class="mt-0 mb-2">
-                                                    <span class="latest"
-                                                        >Recommended:</span
-                                                    >
                                                     MultiMC/Prism Instance
                                                     <span
                                                         ><a
