@@ -77,3 +77,9 @@ identifier = "wiki"
 name = "Wiki"
 url = "https://bta.miraheze.org"
 weight = 8
+
+[[menu.main]]
+identifier = "forum"
+name = "Forum"
+url = "https://forum.betterthanadventure.net"
+weight = 9
